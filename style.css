@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.title{
+    color: white;
+    font-family: Arial;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(24, 24, 27);
+    color: white;
+    font-size: 14px;
+    font-family: Arial;
+}
+.navli{
+    display: flex;
+    justify-content: space-around;
+    width: 38%;
+}
+.navli li{
+    list-style-type: none;
+}
+.navli a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+.navli a:hover{
+    height: 20rem;
+    width: 20rem;
+    color: rgb(230, 186, 67);
+}
+section{
+    background-image: url(./image/bg.jpg);
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+}
+.me{
+    width: 27%;
+    margin-left: 37%;
+}
+div.name{
+    text-align: center;
+    margin-top: -3%;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 3px;
+}
+.name p{
+    font-size: 18px;
+    font-weight: 200;
+}
+.page-content{
+    padding-top:30px;
+    overflow: hidden;
+    padding: 7%;
+
+}
+.card {
+   /* Add shadows to create the "card" effect */
+   /* border: 3px solid teal; */
+    border-radius: 5px;
+    width: 70%;
+    margin-top:6%;
+    margin-bottom: 3%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in;
+    font-family: Arial;
+}
+.card-header{
+    margin: 6%;
+    padding:1%;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(192, 192, 192);
+    text-align: center;
+}
+.card-body{
+    margin-top: -5%;
+    text-align: center;
+    justify-content: space-around;
+    letter-spacing: 6%;
+}
+.card-body{padding:5%;}
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: translate(7%);
+    transition-duration: 500ms;
+    
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+}
+@media screen and (max-width: 1200px){
+    .me{
+        width: 35%;
+        margin-left: 34%;
+    }
+    .navli {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 900px){
+    .me{
+        width: 50%;
+        margin-left: 26%;
+    }
+    .navli {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    .navli{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 9.7vh;
+        background-color: rgb(24, 24, 27);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in ;
+    }
+    .navli li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
